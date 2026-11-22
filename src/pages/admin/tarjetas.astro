@@ -1,0 +1,38 @@
+---
+import Base from "../../layouts/Base.astro";
+import TarjetasAdmin from "../../components/TarjetasAdmin.svelte";
+---
+<Base titulo="Tarjetas · Lotería Mazahua">
+
+
+  <div class="franja"></div>
+  <main>
+    <header>
+      <a href="/admin">← Panel del administrador</a>
+      <h1>Tarjetas RFID</h1>
+    </header>
+    <TarjetasAdmin client:load />
+  </main>
+</Base>
+
+
+<style>
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  header a {
+    color: var(--verde);
+    font-weight: bold;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+  }
+</style>

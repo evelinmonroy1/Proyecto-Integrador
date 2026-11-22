@@ -1,0 +1,804 @@
+{
+ "categorias": [
+  {
+   "id": 1,
+   "nombre": "Saludos y expresiones"
+  },
+  {
+   "id": 2,
+   "nombre": "Partes del cuerpo"
+  },
+  {
+   "id": 3,
+   "nombre": "Comida, frutas y verduras"
+  },
+  {
+   "id": 4,
+   "nombre": "Animales"
+  }
+ ],
+ "palabras": [
+  {
+   "id": 1,
+   "mazahua": "Kjimiji",
+   "espanol": "Buenos días",
+   "categoria_id": 1,
+   "imagen": "1.jpg",
+   "audio": "1.mp3"
+  },
+  {
+   "id": 2,
+   "mazahua": "Ja bi chjenzhⱥ",
+   "espanol": "Buenas tardes",
+   "categoria_id": 1,
+   "imagen": "2.jpg",
+   "audio": "2.mp3"
+  },
+  {
+   "id": 3,
+   "mazahua": "Chjetji",
+   "espanol": "Buenas noches",
+   "categoria_id": 1,
+   "imagen": "3.jpg",
+   "audio": "3.mp3"
+  },
+  {
+   "id": 4,
+   "mazahua": "In chjuzgo e",
+   "espanol": "Mi nombre es…",
+   "categoria_id": 1,
+   "imagen": "4.jpg",
+   "audio": "4.mp3"
+  },
+  {
+   "id": 5,
+   "mazahua": "Na jo'o bi ñ'eje",
+   "espanol": "Bienvenidos",
+   "categoria_id": 1,
+   "imagen": "5.jpg",
+   "audio": "5.mp3"
+  },
+  {
+   "id": 6,
+   "mazahua": "Pokjʉ",
+   "espanol": "Muchas gracias",
+   "categoria_id": 1,
+   "imagen": "6.jpg",
+   "audio": "6.mp3"
+  },
+  {
+   "id": 7,
+   "mazahua": "Na jo'o gi ñonʉ",
+   "espanol": "Buen provecho",
+   "categoria_id": 1,
+   "imagen": "7.jpg",
+   "audio": "7.mp3"
+  },
+  {
+   "id": 8,
+   "mazahua": "Maxkjo",
+   "espanol": "Adiós, nos vemos",
+   "categoria_id": 1,
+   "imagen": "8.jpg",
+   "audio": "8.mp3"
+  },
+  {
+   "id": 9,
+   "mazahua": "Tsjogʉ se̠'e̠",
+   "espanol": "Pase usted",
+   "categoria_id": 1,
+   "imagen": "9.jpg",
+   "audio": "9.mp3"
+  },
+  {
+   "id": 10,
+   "mazahua": "Ra kjogʉtsje",
+   "espanol": "Con permiso",
+   "categoria_id": 1,
+   "imagen": "10.jpg",
+   "audio": "10.mp3"
+  },
+  {
+   "id": 11,
+   "mazahua": "D'agʉ ri nzhogʉ",
+   "espanol": "Vuelva pronto",
+   "categoria_id": 1,
+   "imagen": "11.jpg",
+   "audio": "11.mp3"
+  },
+  {
+   "id": 12,
+   "mazahua": "Xama ra mboxkʉ e Kjimi",
+   "espanol": "Que te vaya bien",
+   "categoria_id": 1,
+   "imagen": "12.jpg",
+   "audio": "12.mp3"
+  },
+  {
+   "id": 13,
+   "mazahua": "Ñíí",
+   "espanol": "Cabeza",
+   "categoria_id": 2,
+   "imagen": "13.jpg",
+   "audio": "13.mp3"
+  },
+  {
+   "id": 14,
+   "mazahua": "S´ib´i",
+   "espanol": "Dientes",
+   "categoria_id": 2,
+   "imagen": "14.jpg",
+   "audio": "14.mp3"
+  },
+  {
+   "id": 15,
+   "mazahua": "Chijmí",
+   "espanol": "Pecho",
+   "categoria_id": 2,
+   "imagen": "15.jpg",
+   "audio": "15.mp3"
+  },
+  {
+   "id": 16,
+   "mazahua": "Dyizí",
+   "espanol": "Garganta",
+   "categoria_id": 2,
+   "imagen": "16.jpg",
+   "audio": "16.mp3"
+  },
+  {
+   "id": 17,
+   "mazahua": "Xiné",
+   "espanol": "Labios",
+   "categoria_id": 2,
+   "imagen": "17.jpg",
+   "audio": "17.mp3"
+  },
+  {
+   "id": 18,
+   "mazahua": "Xiñú",
+   "espanol": "Nariz",
+   "categoria_id": 2,
+   "imagen": "18.jpg",
+   "audio": "18.mp3"
+  },
+  {
+   "id": 19,
+   "mazahua": "Nchoó",
+   "espanol": "Ojos",
+   "categoria_id": 2,
+   "imagen": "19.jpg",
+   "audio": "19.mp3"
+  },
+  {
+   "id": 20,
+   "mazahua": "Ntéé",
+   "espanol": "Frente",
+   "categoria_id": 2,
+   "imagen": "20.jpg",
+   "audio": "20.mp3"
+  },
+  {
+   "id": 21,
+   "mazahua": "Ximi",
+   "espanol": "Pierna",
+   "categoria_id": 2,
+   "imagen": "21.jpg",
+   "audio": "21.mp3"
+  },
+  {
+   "id": 22,
+   "mazahua": "Ñijmó",
+   "espanol": "Rodilla",
+   "categoria_id": 2,
+   "imagen": "22.jpg",
+   "audio": "22.mp3"
+  },
+  {
+   "id": 23,
+   "mazahua": "Ngua´a",
+   "espanol": "Pie",
+   "categoria_id": 2,
+   "imagen": "23.jpg",
+   "audio": "23.mp3"
+  },
+  {
+   "id": 24,
+   "mazahua": "Dyee",
+   "espanol": "Mano",
+   "categoria_id": 2,
+   "imagen": "24.jpg",
+   "audio": "24.mp3"
+  },
+  {
+   "id": 25,
+   "mazahua": "Shelli",
+   "espanol": "Tortilla",
+   "categoria_id": 3,
+   "imagen": "25.jpg",
+   "audio": "25.mp3"
+  },
+  {
+   "id": 26,
+   "mazahua": "Oo",
+   "espanol": "Sal",
+   "categoria_id": 3,
+   "imagen": "26.jpg",
+   "audio": "26.mp3"
+  },
+  {
+   "id": 27,
+   "mazahua": "Tsas'ʉ",
+   "espanol": "Taco",
+   "categoria_id": 3,
+   "imagen": "27.jpg",
+   "audio": "27.mp3"
+  },
+  {
+   "id": 28,
+   "mazahua": "Jmoo",
+   "espanol": "Pescado",
+   "categoria_id": 3,
+   "imagen": "28.jpg",
+   "audio": "28.mp3"
+  },
+  {
+   "id": 29,
+   "mazahua": "Tjromechim",
+   "espanol": "Pan",
+   "categoria_id": 3,
+   "imagen": "29.jpg",
+   "audio": "29.mp3"
+  },
+  {
+   "id": 30,
+   "mazahua": "P'´jadú",
+   "espanol": "Caballo",
+   "categoria_id": 4,
+   "imagen": "30.jpg",
+   "audio": "30.mp3"
+  },
+  {
+   "id": 31,
+   "mazahua": "Muu",
+   "espanol": "Calabaza",
+   "categoria_id": 3,
+   "imagen": "31.jpg",
+   "audio": "31.mp3"
+  },
+  {
+   "id": 32,
+   "mazahua": "Tjenxa",
+   "espanol": "Gorditas",
+   "categoria_id": 3,
+   "imagen": "32.jpg",
+   "audio": "32.mp3"
+  },
+  {
+   "id": 33,
+   "mazahua": "Tjoo",
+   "espanol": "Cereal de maíz",
+   "categoria_id": 3,
+   "imagen": "33.jpg",
+   "audio": "33.mp3"
+  },
+  {
+   "id": 34,
+   "mazahua": "Mexe",
+   "espanol": "Guajolote",
+   "categoria_id": 4,
+   "imagen": "34.jpg",
+   "audio": "34.mp3"
+  },
+  {
+   "id": 35,
+   "mazahua": "Bareje",
+   "espanol": "Café",
+   "categoria_id": 3,
+   "imagen": "35.jpg",
+   "audio": "35.mp3"
+  },
+  {
+   "id": 36,
+   "mazahua": "T'ejme",
+   "espanol": "Atole",
+   "categoria_id": 3,
+   "imagen": "36.jpg",
+   "audio": "36.mp3"
+  },
+  {
+   "id": 37,
+   "mazahua": "Tr'appu",
+   "espanol": "Pulque",
+   "categoria_id": 3,
+   "imagen": "37.jpg",
+   "audio": "37.mp3"
+  },
+  {
+   "id": 38,
+   "mazahua": "Nd´see",
+   "espanol": "Carne",
+   "categoria_id": 3,
+   "imagen": "38.jpg",
+   "audio": "38.mp3"
+  },
+  {
+   "id": 39,
+   "mazahua": "Ts'apo",
+   "espanol": "Chicle",
+   "categoria_id": 3,
+   "imagen": "39.jpg",
+   "audio": "39.mp3"
+  },
+  {
+   "id": 40,
+   "mazahua": "Dyoxú",
+   "espanol": "Gusano",
+   "categoria_id": 4,
+   "imagen": "40.jpg",
+   "audio": "40.mp3"
+  },
+  {
+   "id": 41,
+   "mazahua": "Ndense",
+   "espanol": "Capulín",
+   "categoria_id": 3,
+   "imagen": "41.jpg",
+   "audio": "41.mp3"
+  },
+  {
+   "id": 42,
+   "mazahua": "Ndora",
+   "espanol": "Durazno",
+   "categoria_id": 3,
+   "imagen": "42.jpg",
+   "audio": "42.mp3"
+  },
+  {
+   "id": 43,
+   "mazahua": "Nrekjua",
+   "espanol": "Burro",
+   "categoria_id": 4,
+   "imagen": "43.jpg",
+   "audio": "43.mp3"
+  },
+  {
+   "id": 44,
+   "mazahua": "Ixi",
+   "espanol": "Manzana",
+   "categoria_id": 3,
+   "imagen": "44.jpg",
+   "audio": "44.mp3"
+  },
+  {
+   "id": 45,
+   "mazahua": "Kjúaa",
+   "espanol": "Conejo",
+   "categoria_id": 4,
+   "imagen": "45.jpg",
+   "audio": "45.mp3"
+  },
+  {
+   "id": 46,
+   "mazahua": "Ndabxa",
+   "espanol": "Plátano",
+   "categoria_id": 3,
+   "imagen": "46.jpg",
+   "audio": "46.mp3"
+  },
+  {
+   "id": 47,
+   "mazahua": "Pejii",
+   "espanol": "Tejocote",
+   "categoria_id": 3,
+   "imagen": "47.jpg",
+   "audio": "47.mp3"
+  },
+  {
+   "id": 48,
+   "mazahua": "Tsijñi",
+   "espanol": "Tuna",
+   "categoria_id": 3,
+   "imagen": "48.jpg",
+   "audio": "48.mp3"
+  },
+  {
+   "id": 49,
+   "mazahua": "Limnu",
+   "espanol": "Limón",
+   "categoria_id": 3,
+   "imagen": "49.jpg",
+   "audio": "49.mp3"
+  },
+  {
+   "id": 50,
+   "mazahua": "D'oka",
+   "espanol": "Papa",
+   "categoria_id": 3,
+   "imagen": "50.jpg",
+   "audio": "50.mp3"
+  },
+  {
+   "id": 51,
+   "mazahua": "Ndemoxʉ",
+   "espanol": "Jitomate",
+   "categoria_id": 3,
+   "imagen": "51.jpg",
+   "audio": "51.mp3"
+  },
+  {
+   "id": 52,
+   "mazahua": "Ii",
+   "espanol": "Chile",
+   "categoria_id": 3,
+   "imagen": "52.jpg",
+   "audio": "52.mp3"
+  },
+  {
+   "id": 53,
+   "mazahua": "Ndenʉ",
+   "espanol": "Cebolla",
+   "categoria_id": 3,
+   "imagen": "53.jpg",
+   "audio": "53.mp3"
+  },
+  {
+   "id": 54,
+   "mazahua": "B'agá",
+   "espanol": "Vaca",
+   "categoria_id": 4,
+   "imagen": "54.jpg",
+   "audio": "54.mp3"
+  },
+  {
+   "id": 55,
+   "mazahua": "Axoxi",
+   "espanol": "Ajo",
+   "categoria_id": 3,
+   "imagen": "55.jpg",
+   "audio": "55.mp3"
+  },
+  {
+   "id": 56,
+   "mazahua": "Nzgoñi",
+   "espanol": "Pollo",
+   "categoria_id": 4,
+   "imagen": "56.jpg",
+   "audio": "56.mp3"
+  },
+  {
+   "id": 57,
+   "mazahua": "Moxa",
+   "espanol": "Elote",
+   "categoria_id": 3,
+   "imagen": "57.jpg",
+   "audio": "57.mp3"
+  },
+  {
+   "id": 58,
+   "mazahua": "Dyoó",
+   "espanol": "Perro",
+   "categoria_id": 4,
+   "imagen": "58.jpg",
+   "audio": "58.mp3"
+  },
+  {
+   "id": 59,
+   "mazahua": "Mixií",
+   "espanol": "Gato",
+   "categoria_id": 4,
+   "imagen": "59.jpg",
+   "audio": "59.mp3"
+  },
+  {
+   "id": 60,
+   "mazahua": "Tsojo",
+   "espanol": "Hongos",
+   "categoria_id": 3,
+   "imagen": "60.jpg",
+   "audio": "60.mp3"
+  }
+ ],
+ "tarjetas_rfid": [
+  {
+   "id": 52,
+   "uid": "1938FB0F",
+   "palabra_id": 1
+  },
+  {
+   "id": 53,
+   "uid": "09A4FF0F",
+   "palabra_id": 2
+  },
+  {
+   "id": 54,
+   "uid": "79A4F20F",
+   "palabra_id": 3
+  },
+  {
+   "id": 55,
+   "uid": "C987FE0F",
+   "palabra_id": 4
+  },
+  {
+   "id": 56,
+   "uid": "87D04912",
+   "palabra_id": 5
+  },
+  {
+   "id": 57,
+   "uid": "97F84812",
+   "palabra_id": 6
+  },
+  {
+   "id": 58,
+   "uid": "F7893D12",
+   "palabra_id": 7
+  },
+  {
+   "id": 59,
+   "uid": "07E74A12",
+   "palabra_id": 8
+  },
+  {
+   "id": 60,
+   "uid": "47F54412",
+   "palabra_id": 9
+  },
+  {
+   "id": 61,
+   "uid": "67D80437",
+   "palabra_id": 10
+  },
+  {
+   "id": 62,
+   "uid": "975A1A37",
+   "palabra_id": 11
+  },
+  {
+   "id": 63,
+   "uid": "0AE6B239",
+   "palabra_id": 12
+  },
+  {
+   "id": 64,
+   "uid": "FAE9B239",
+   "palabra_id": 13
+  },
+  {
+   "id": 65,
+   "uid": "8ACEB239",
+   "palabra_id": 14
+  },
+  {
+   "id": 66,
+   "uid": "3A5ABA39",
+   "palabra_id": 15
+  },
+  {
+   "id": 67,
+   "uid": "3AD4283A",
+   "palabra_id": 16
+  },
+  {
+   "id": 68,
+   "uid": "5A46133A",
+   "palabra_id": 17
+  },
+  {
+   "id": 69,
+   "uid": "EAC4B939",
+   "palabra_id": 18
+  },
+  {
+   "id": 70,
+   "uid": "EAA05A3B",
+   "palabra_id": 19
+  },
+  {
+   "id": 71,
+   "uid": "49DEDD0F",
+   "palabra_id": 20
+  },
+  {
+   "id": 72,
+   "uid": "09B6AF0F",
+   "palabra_id": 21
+  },
+  {
+   "id": 73,
+   "uid": "27F91B37",
+   "palabra_id": 22
+  },
+  {
+   "id": 74,
+   "uid": "3929B80F",
+   "palabra_id": 23
+  },
+  {
+   "id": 75,
+   "uid": "A95EC70F",
+   "palabra_id": 24
+  },
+  {
+   "id": 76,
+   "uid": "693CBE0F",
+   "palabra_id": 25
+  },
+  {
+   "id": 77,
+   "uid": "99A5B90F",
+   "palabra_id": 26
+  },
+  {
+   "id": 78,
+   "uid": "9993B90F",
+   "palabra_id": 27
+  },
+  {
+   "id": 79,
+   "uid": "77273C12",
+   "palabra_id": 28
+  },
+  {
+   "id": 80,
+   "uid": "E917DD0F",
+   "palabra_id": 29
+  },
+  {
+   "id": 81,
+   "uid": "E9ECBA0F",
+   "palabra_id": 30
+  },
+  {
+   "id": 82,
+   "uid": "1A5F293C",
+   "palabra_id": 31
+  },
+  {
+   "id": 83,
+   "uid": "5A87B839",
+   "palabra_id": 32
+  },
+  {
+   "id": 84,
+   "uid": "17B6942D",
+   "palabra_id": 33
+  },
+  {
+   "id": 85,
+   "uid": "79C2B50F",
+   "palabra_id": 34
+  },
+  {
+   "id": 86,
+   "uid": "B78BF636",
+   "palabra_id": 35
+  },
+  {
+   "id": 87,
+   "uid": "071D4D12",
+   "palabra_id": 36
+  },
+  {
+   "id": 88,
+   "uid": "D7155412",
+   "palabra_id": 37
+  },
+  {
+   "id": 89,
+   "uid": "E7552C37",
+   "palabra_id": 38
+  },
+  {
+   "id": 90,
+   "uid": "67684A12",
+   "palabra_id": 39
+  },
+  {
+   "id": 91,
+   "uid": "2994B10F",
+   "palabra_id": 40
+  },
+  {
+   "id": 92,
+   "uid": "E7EF4B12",
+   "palabra_id": 41
+  },
+  {
+   "id": 93,
+   "uid": "590ED90F",
+   "palabra_id": 42
+  },
+  {
+   "id": 94,
+   "uid": "4959BD0F",
+   "palabra_id": 43
+  },
+  {
+   "id": 95,
+   "uid": "69ABE00F",
+   "palabra_id": 44
+  },
+  {
+   "id": 96,
+   "uid": "F99EAF0F",
+   "palabra_id": 45
+  },
+  {
+   "id": 97,
+   "uid": "87A53912",
+   "palabra_id": 46
+  },
+  {
+   "id": 98,
+   "uid": "07514812",
+   "palabra_id": 47
+  },
+  {
+   "id": 99,
+   "uid": "673E4A12",
+   "palabra_id": 48
+  },
+  {
+   "id": 100,
+   "uid": "87A44512",
+   "palabra_id": 49
+  },
+  {
+   "id": 101,
+   "uid": "572E4F12",
+   "palabra_id": 50
+  },
+  {
+   "id": 102,
+   "uid": "27910737",
+   "palabra_id": 51
+  },
+  {
+   "id": 103,
+   "uid": "37861637",
+   "palabra_id": 52
+  },
+  {
+   "id": 104,
+   "uid": "09BEB510",
+   "palabra_id": 53
+  },
+  {
+   "id": 105,
+   "uid": "F79CF636",
+   "palabra_id": 54
+  },
+  {
+   "id": 106,
+   "uid": "0AE7B740",
+   "palabra_id": 55
+  },
+  {
+   "id": 107,
+   "uid": "E979B40F",
+   "palabra_id": 56
+  },
+  {
+   "id": 108,
+   "uid": "274E3912",
+   "palabra_id": 57
+  },
+  {
+   "id": 109,
+   "uid": "393FC40F",
+   "palabra_id": 58
+  },
+  {
+   "id": 110,
+   "uid": "893FE50F",
+   "palabra_id": 59
+  },
+  {
+   "id": 111,
+   "uid": "B917BE10",
+   "palabra_id": 60
+  }
+ ]
+}

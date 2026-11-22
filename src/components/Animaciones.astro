@@ -1,0 +1,116 @@
+---
+// Animaciones de la página de inicio:
+// - las secciones aparecen suavemente al bajar
+// - la niña "flota" y las flores giran despacio
+// Solo afecta a la página de inicio (.tema-inicio).
+---
+<style is:global>
+  /* Aparecer al bajar (solo si el navegador ejecuta JavaScript) */
+  .js-aparecer .tema-inicio .aparece {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .js-aparecer .tema-inicio .aparece.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* La ilustración flota */
+  .tema-inicio .ilustracion img {
+    animation: inicio-flotar 6s ease-in-out infinite;
+  }
+  @keyframes inicio-flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Flores decorativas giran muy despacio */
+  .tema-inicio .petalos {
+    animation: inicio-girar 80s linear infinite;
+  }
+  .tema-inicio .petalos.der {
+    animation-direction: reverse;
+  }
+  @keyframes inicio-girar {
+    to { transform: rotate(360deg); }
+  }
+
+  /* El logo gira al pasar el mouse */
+  .tema-inicio .marca .logo {
+    transition: transform 0.6s ease;
+  }
+  .tema-inicio .marca:hover .logo {
+    transform: rotate(90deg);
+  }
+
+  /* Las flechas de las tarjetas se mueven al pasar el mouse */
+  .tema-inicio .tarjeta .flecha,
+  .tema-inicio .opcion .flecha {
+    transition: transform 0.2s;
+  }
+  .tema-inicio .tarjeta:hover .flecha,
+  .tema-inicio .opcion:hover .flecha {
+    transform: translateX(4px);
+  }
+
+  /* Respeta a quien prefiere menos movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    .js-aparecer .tema-inicio .aparece {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .tema-inicio .ilustracion img,
+    .tema-inicio .petalos {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const selectores = [
+    ".portada .titulo",
+    ".portada .ilustracion",
+    ".opciones .opcion",
+    ".palabra-dia-contenedor",
+    ".explorar .separador",
+    ".explorar h2",
+    ".explorar .tarjeta",
+  ];
+
+  const raiz = document.querySelector(".tema-inicio");
+  if (raiz && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js-aparecer");
+
+    const elementos = raiz.querySelectorAll(selectores.join(","));
+    elementos.forEach((el) => {
+      el.classList.add("aparece");
+      // Las tarjetas hermanas aparecen una tras otra
+      const hermanos = Array.from(el.parentElement?.children ?? []);
+      const pos = hermanos.indexOf(el);
+      if (pos > 0) el.style.transitionDelay = `${Math.min(pos, 4) * 0.12}s`;
+    });
+
+    const observador = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((e) => {
+          if (e.isIntersecting) {
+            const el = e.target;
+            el.classList.add("visible");
+            observador.unobserve(el);
+            // Al terminar, se quitan las clases para que el efecto al pasar el mouse siga funcionando
+            setTimeout(() => {
+              el.classList.remove("aparece", "visible");
+              el.style.transitionDelay = "";
+            }, 1400);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    elementos.forEach((el) => observador.observe(el));
+  }
+</script>

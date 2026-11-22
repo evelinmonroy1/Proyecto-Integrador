@@ -1,0 +1,71 @@
+---
+import Base from "../layouts/Base.astro";
+import Navegacion from "../components/Navegacion.astro";
+import "../styles/secciones.css";
+import Galeria from "../components/Galeria.svelte";
+---
+<Base titulo="Galería · Lotería Mazahua">
+  <div class="tema-info">
+    <div class="franja"></div>
+    <Navegacion activa="galeria" />
+
+    <main>
+      <header>
+        <div class="encabezado-texto">
+          <span class="etiqueta">Colección · 60 tarjetas</span>
+          <h1>Galería</h1>
+          <p class="cursiva">Cada imagen, una palabra.</p>
+          <p class="texto">Toca una tarjeta para verla en grande y escuchar cómo se dice.</p>
+        </div>
+        <div class="encabezado-imagen">
+          <img src="/galeria.png" alt="Ilustración de la galería de la Lotería Mazahua" />
+        </div>
+      </header>
+      <Galeria client:load />
+    </main>
+    <div class="franja"></div>
+  </div>
+</Base>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.4rem, 5vw, 3rem) 5rem;
+    min-height: 70vh;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+    padding: clamp(3.5rem, 10vh, 6rem) 0 3rem;
+  }
+  .encabezado-texto {
+    flex: 1 1 340px;
+  }
+  h1 {
+    font-size: clamp(3.5rem, 10vw, 6.5rem);
+    line-height: 0.95;
+  }
+  .cursiva {
+    margin: 0.8rem 0 1rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  }
+  .texto {
+    margin: 0;
+    color: var(--suave);
+  }
+
+  /* Imagen al lado del título */
+  .encabezado-imagen {
+    flex: 0 1 380px;
+    margin: 0 auto;
+  }
+  .encabezado-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply; /* el fondo blanco de la imagen se funde con el crema */
+  }
+</style>

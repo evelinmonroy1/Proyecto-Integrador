@@ -1,0 +1,21 @@
+CAMBIOS PARA SUBIR LOTERIA MAZAHUA A LA NUBE
+=============================================
+
+Estos archivos van DENTRO de tu carpeta "loteria-mazahua", en las mismas
+carpetas que ves aquí. Cuando Windows pregunte "¿Reemplazar los archivos?",
+elige "Reemplazar los archivos en el destino".
+
+  loteria-mazahua/
+    Dockerfile                    (nuevo)
+    .dockerignore                 (nuevo)
+    .gitignore                    (reemplaza al que tenías)
+    src/lib/config.js             (reemplaza)
+    backend/database.py           (reemplaza)
+    backend/main.py               (reemplaza)
+    backend/models.py             (reemplaza)
+    backend/requirements.txt      (reemplaza)
+    backend/seed.py               (nuevo)
+    backend/.env.example          (nuevo, solo de ejemplo)
+
+Tu proyecto sigue funcionando igual en tu computadora (npm run dev y uvicorn).
+No borres ni cambies tu archivo backend/.env.

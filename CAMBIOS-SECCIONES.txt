@@ -1,0 +1,23 @@
+NUEVAS SECCIONES (Videos, La lengua, Galería)
+=============================================
+
+El juego NO se modificó: /jugar, /admin y sus componentes quedan igual.
+
+Archivos nuevos
+  src/components/Navegacion.astro    barra de arriba (secciones + botones Jugar / Administrador)
+  src/components/Galeria.svelte      galería con filtros, buscador, visor y audio
+  src/components/PalabrasMuestra.svelte  frases con audio para la página de la lengua
+  src/pages/lengua.astro             /lengua   información sobre el jñatjo
+  src/pages/galeria.astro            /galeria  todas las tarjetas
+  src/pages/videos.astro             /videos   apartado de videos
+  src/data/videos.js                 AQUÍ se agregan los videos (ver instrucciones dentro)
+  public/videos/                     carpeta para videos .mp4 propios
+  backend/routers/galeria.py         ruta pública de SOLO LECTURA: GET /api/galeria
+
+Archivos modificados
+  src/pages/index.astro   se agregó la barra de navegación y "Explora y aprende"
+  backend/main.py         2 líneas: importar y registrar el router de galería
+
+CÓMO AGREGAR UN VIDEO
+  Abre src/data/videos.js y pega el enlace de YouTube en "youtube",
+  o guarda tu .mp4 en public/videos/ y escribe "/videos/nombre.mp4" en "archivo".

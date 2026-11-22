@@ -1,0 +1,16 @@
+# compilado y dependencias
+dist/
+.astro/
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# claves y contraseñas: NUNCA se suben
+.env
+.env.*
+backend/.env
+
+# base de datos de pruebas
+*.db
+!.env.example

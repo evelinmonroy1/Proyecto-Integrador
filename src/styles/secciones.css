@@ -1,0 +1,329 @@
+/* ============================================================
+   TEMA DE LA LENGUA, GALERÍA Y VIDEOS
+   Mismo estilo que la página de inicio: fondo crema, azules,
+   amarillo mostaza, letra Baloo 2 y greca mazahua al final.
+   Solo se aplica dentro de <div class="tema-info">.
+   El juego (/jugar, /admin) NO cambia.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap");
+
+.tema-info {
+  /* Paleta (la misma del inicio) */
+  --marino: #143b61;
+  --azul-fuerte: #1f5c94;
+  --medio: #457caa;
+  --cielo: #589ac4;
+  --gris: #99b2c7;
+  --claro: #d2dee7;
+  --hielo: #e8eef5;
+  --fondo-crema: #fdf6ec;
+  --mostaza: #f2c14e;
+
+  /* Nombres que usan las páginas y componentes */
+  --fondo: var(--fondo-crema);
+  --tinta: var(--marino);
+  --suave: #3d5f80;
+  --linea: var(--claro);
+  --azul: var(--azul-fuerte);
+  --azul-claro: var(--hielo);
+  --crema: var(--fondo-crema);
+  --arena: var(--claro);
+  --cafe: var(--suave);
+  --verde: var(--azul-fuerte);
+  --salvia: var(--gris);
+  --terracota: var(--mostaza);
+  --celeste: var(--hielo);
+
+  --serif: "Baloo 2", "Nunito", system-ui, sans-serif; /* títulos */
+  --sans: "Nunito", "Segoe UI", system-ui, sans-serif; /* texto */
+
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--fondo-crema);
+  color: var(--marino);
+  font-family: var(--sans);
+  line-height: 1.65;
+}
+
+/* Flores decorativas a los lados (como en el inicio) */
+.tema-info::before,
+.tema-info::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 320px;
+  height: 320px;
+  opacity: 0.8;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='%23d2dee7'%3E%3Cellipse cx='24' cy='10' rx='6' ry='10'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(45 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(90 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(135 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(180 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(225 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(270 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(315 24 24)'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='6' fill='%23fdf6ec'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.tema-info::before {
+  top: 7rem;
+  left: -190px;
+}
+.tema-info::after {
+  top: 18rem;
+  right: -200px;
+}
+
+/* Títulos */
+.tema-info h1,
+.tema-info h2,
+.tema-info h3 {
+  font-family: var(--serif);
+  font-weight: 800;
+  color: var(--marino);
+  letter-spacing: 0;
+}
+.tema-info h1 {
+  line-height: 0.9 !important;
+}
+.tema-info h3 {
+  font-weight: 700;
+}
+.tema-info strong {
+  color: var(--marino);
+}
+
+/* Etiqueta pequeña: píldora azul clara */
+.tema-info .etiqueta {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.95rem;
+  border-radius: 999px;
+  background: var(--hielo);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--azul-fuerte);
+}
+
+/* Frases de acento: azul y con subrayado mostaza */
+.tema-info .cursiva {
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--azul-fuerte);
+}
+.tema-info p.cursiva {
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  background: linear-gradient(var(--mostaza), var(--mostaza)) left bottom / 70% 4px no-repeat;
+}
+
+/* Botones */
+.tema-info .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  background: var(--mostaza);
+  color: var(--marino);
+  font-weight: 700;
+  box-shadow: 0 10px 22px -10px rgba(20, 59, 97, 0.45);
+  transition: transform 0.2s;
+}
+.tema-info .btn:hover {
+  transform: translateY(-2px);
+}
+.tema-info .enlace {
+  font-weight: 700;
+  color: var(--azul-fuerte);
+  border-bottom: 2px solid var(--mostaza);
+  padding-bottom: 2px;
+}
+
+.tema-info input,
+.tema-info button {
+  font-family: inherit;
+}
+
+/* ---------- Franjas: arriba se oculta; abajo se vuelve ola + greca ---------- */
+.tema-info > .franja.franja {
+  display: none;
+}
+.tema-info > .franja.franja:last-child {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 106px;
+  margin-top: 2rem;
+  border: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23143b61' d='M0 60V30C240 0 480 0 720 22s480 30 720 0v38z'/%3E%3C/svg%3E") top / 100% 50px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Crect width='56' height='56' fill='%23143b61'/%3E%3Cg fill='none' stroke='%23589ac4' stroke-width='3'%3E%3Cpath d='M28 4 52 28 28 52 4 28z'/%3E%3Cpath d='M28 14 42 28 28 42 14 28z'/%3E%3C/g%3E%3Cpath d='M28 23 33 28 28 33 23 28z' fill='%23589ac4'/%3E%3C/svg%3E") left bottom / 56px 56px repeat-x;
+}
+
+/* ---------- La lengua: bloques como tarjetas blancas ---------- */
+.tema-info .datos.datos {
+  border: 0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 22px -12px rgba(20, 59, 97, 0.35);
+  padding: 0 1.5rem;
+}
+.tema-info .dato strong {
+  font-weight: 800;
+  color: var(--azul-fuerte);
+}
+.tema-info .seccion.seccion {
+  margin: 2rem 0;
+  padding: clamp(2rem, 5vw, 3.2rem);
+  border: 0;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 8px 22px -12px rgba(20, 59, 97, 0.35);
+}
+.tema-info .familia .resaltar {
+  border-top-color: var(--mostaza) !important;
+}
+.tema-info .glifo {
+  font-weight: 800;
+}
+.tema-info .frase {
+  font-weight: 700;
+}
+.tema-info .cierre.cierre {
+  margin: 2rem 0;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+  border-radius: 24px;
+  background: var(--marino);
+  color: white;
+}
+.tema-info .cierre h2,
+.tema-info .cierre strong {
+  color: white;
+}
+.tema-info .cierre .cursiva {
+  color: #a9c9e6;
+}
+.tema-info .cierre.cierre p {
+  color: var(--claro);
+}
+.tema-info .cierre .etiqueta {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.tema-info .cierre .enlace {
+  color: white;
+}
+
+/* ---------- Videos: tarjetas blancas ---------- */
+.tema-info .video.video {
+  overflow: hidden;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 8px 22px -12px rgba(20, 59, 97, 0.35);
+}
+.tema-info .video .pantalla {
+  border-radius: 0;
+}
+.tema-info .video .texto {
+  padding: 1.3rem 1.5rem 1.6rem;
+}
+.tema-info .video .numero {
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 800;
+  color: var(--mostaza);
+}
+.tema-info .proximamente.proximamente {
+  background: linear-gradient(135deg, var(--marino), var(--medio));
+}
+.tema-info .proximamente .play {
+  border-color: white;
+  color: white;
+}
+.tema-info .proximamente .etiqueta {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* ---------- Galería ---------- */
+.tema-info .tarjeta.tarjeta {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px -12px rgba(20, 59, 97, 0.45);
+}
+.tema-info .filtros button.activo {
+  border-bottom-width: 3px;
+}
+.tema-info .escuchar.escuchar {
+  background: var(--mostaza);
+  color: var(--marino);
+  font-weight: 700;
+}
+.tema-info .fondo.fondo {
+  background: rgba(20, 59, 97, 0.88);
+}
+.tema-info .fondo .pie strong {
+  color: white;
+  font-weight: 700;
+}
+.tema-info .fondo .pie span,
+.tema-info .fondo .contador {
+  color: var(--claro);
+}
+.tema-info .cerrar.cerrar,
+.tema-info .flecha.flecha {
+  background: white;
+  border-color: white;
+  color: var(--marino);
+}
+.tema-info .cerrar.cerrar:hover,
+.tema-info .flecha.flecha:hover {
+  background: var(--mostaza);
+  color: var(--marino);
+}
+
+/* ---------- Escucha y repite ---------- */
+.tema-info .frases strong {
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .tema-info::before,
+  .tema-info::after {
+    display: none;
+  }
+  /* ---------- La lengua: imagen al lado del título ---------- */
+.tema-info .portada.portada {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+.tema-info .portada .subtitulo {
+  line-height: 1.2;
+}
+.tema-info .portada-imagen {
+  justify-self: end;
+  width: 100%;
+  max-width: 400px;
+}
+.tema-info .circulo-fondo {
+  display: none;
+}
+.tema-info .portada-imagen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply; /* el fondo blanco de la imagen se funde con el crema */
+}
+@media (max-width: 820px) {
+  .tema-info .portada.portada {
+    grid-template-columns: 1fr;
+  }
+  .tema-info .portada-imagen {
+    justify-self: center;
+    max-width: 300px;
+  }
+}
+
+ 
+}

@@ -1,0 +1,123 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base titulo="Iniciar sesión · Lotería Mazahua">
+  <div class="franja"></div>
+  <main>
+    <a class="volver" href="/">← Inicio</a>
+    <h1>Acceso del administrador</h1>
+    <form id="formulario" autocomplete="on">
+      <label>
+        Usuario
+        <input id="usuario" name="usuario" autocomplete="username" required />
+      </label>
+            <label>
+        Contraseña
+        <div class="campo-pass">
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+          <button id="ver" type="button" class="ver" aria-label="Mostrar contraseña">Mostrar</button>
+        </div>
+      </label>
+      <p id="error" role="alert" hidden></p>
+      <button id="entrar" type="submit">Entrar</button>
+    </form>
+  </main>
+</Base>
+
+<script>
+  import { API } from "../../lib/config.js";
+  import { obtenerToken, guardarToken } from "../../lib/auth.js";
+
+  if (obtenerToken()) window.location.replace("/admin");
+
+  const form = document.getElementById("formulario") as HTMLFormElement;
+  const error = document.getElementById("error") as HTMLElement;
+  const boton = document.getElementById("entrar") as HTMLButtonElement;
+    const campoPass = document.getElementById("password") as HTMLInputElement;
+  const botonVer = document.getElementById("ver") as HTMLButtonElement;
+  botonVer.addEventListener("click", () => {
+    const oculta = campoPass.type === "password";
+    campoPass.type = oculta ? "text" : "password";
+    botonVer.textContent = oculta ? "Ocultar" : "Mostrar";
+    botonVer.setAttribute("aria-label", oculta ? "Ocultar contraseña" : "Mostrar contraseña");
+  });
+
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    error.hidden = true;
+    boton.disabled = true;
+    boton.textContent = "Entrando…";
+    try {
+      const r = await fetch(`${API}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          usuario: (document.getElementById("usuario") as HTMLInputElement).value,
+          password: (document.getElementById("password") as HTMLInputElement).value,
+        }),
+      });
+      const datos = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(datos.detail || "No se pudo iniciar sesión");
+      guardarToken(datos.token);
+      window.location.href = "/admin";
+    } catch (err) {
+      error.textContent = err instanceof TypeError ? "No hay conexión con el servidor" : (err as Error).message;
+      error.hidden = false;
+      boton.disabled = false;
+      boton.textContent = "Entrar";
+    }
+  });
+</script>
+
+<style>
+  main {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .volver { color: var(--verde); font-weight: bold; }
+  h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  form { display: flex; flex-direction: column; gap: 1rem; }
+  label { display: flex; flex-direction: column; gap: 0.35rem; font-weight: bold; }
+  input {
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+    border: 2px solid #c9b9a6;
+    border-radius: 12px;
+  }
+  input:focus { outline: none; border-color: var(--verde); }
+  button {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: white;
+    background: var(--verde);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: wait; }
+  #error { color: #b00020; font-weight: bold; margin: 0; }
+  .campo-pass {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .campo-pass input {
+    flex: 1;
+    margin-top: 0;
+  }
+  .ver {
+    background: var(--crema);
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 12px;
+    padding: 0 0.9rem;
+    font-weight: bold;
+  }
+
+</style>

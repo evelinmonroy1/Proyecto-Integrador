@@ -1,0 +1,459 @@
+---
+import Base from "../layouts/Base.astro";
+import Navegacion from "../components/Navegacion.astro";
+import "../styles/secciones.css";
+import PalabrasMuestra from "../components/PalabrasMuestra.svelte";
+
+const datos = [
+  { cifra: "150 mil", texto: "hablantes en México" },
+  { cifra: "2", texto: "variantes: oriente y occidente" },
+  { cifra: "Otomangue", texto: "familia de lenguas" },
+  { cifra: "Medio", texto: "riesgo de desaparición" },
+];
+
+const parientes = [
+  { nombre: "Mazahua", propio: "Jñatjo", resaltar: true },
+  { nombre: "Otomí", propio: "Hñähñu" },
+  { nombre: "Matlatzinca", propio: "" },
+  { nombre: "Tlahuica", propio: "Pjiekakjo" },
+];
+
+const letras = [
+  {
+    letra: "ʉ",
+    titulo: "Vocales con barra",
+    texto: "Letras como ʉ, ⱥ, ɇ o ø son vocales que el español no tiene. La ʉ suena entre una «i» y una «u».",
+    ejemplo: "Pokjʉ · Muchas gracias",
+  },
+  {
+    letra: "'",
+    titulo: "El saltillo",
+    texto: "El apóstrofo marca un pequeño corte de la voz en la garganta, como al decir «¡oh-oh!».",
+    ejemplo: "Na jo'o bi ñ'eje · Bienvenidos",
+  },
+  {
+    letra: "a̱",
+    titulo: "Vocales nasales",
+    texto: "En varios alfabetos, una línea debajo de la vocal indica que el aire también sale por la nariz.",
+    ejemplo: "Tsjogʉ se̠'e̠ · Pase usted",
+  },
+  {
+    letra: "jñ",
+    titulo: "Consonantes con «j»",
+    texto: "Combinaciones como jñ, jm o kj forman sonidos propios. Así empieza el nombre Jñatjo.",
+    ejemplo: "Kjimiji · Buenos días",
+  },
+];
+
+const lugares = [
+  "San Felipe del Progreso",
+  "San José del Rincón",
+  "Ixtlahuaca",
+  "Atlacomulco",
+  "Jocotitlán",
+  "El Oro",
+  "Temascalcingo",
+  "Villa Victoria",
+  "Donato Guerra",
+  "Villa de Allende",
+];
+---
+<Base titulo="La lengua mazahua · Lotería Mazahua">
+  <div class="tema-info">
+    <div class="franja"></div>
+    <Navegacion activa="lengua" />
+
+    <main>
+      <section class="portada">
+        <div class="portada-texto">
+          <span class="etiqueta">Lengua · Cultura · Identidad</span>
+          <h1>Jñatjo</h1>
+          <p class="subtitulo cursiva">La voz del pueblo mazahua.</p>
+          <p class="intro">
+            Una lengua originaria de México que se habla en el noroeste del Estado de México y el
+            oriente de Michoacán. Sus hablantes la llaman <em>jñatjo</em>, y con ese mismo nombre se
+            nombran a sí mismos.
+          </p>
+        </div>
+        <div class="portada-imagen">
+          <img src="/lengua.png" alt="Niña mazahua con traje tradicional sosteniendo un libro" />
+        </div>
+      </section>
+
+      <section class="datos" aria-label="Datos rápidos">
+        {datos.map((d) => (
+          <div class="dato">
+            <strong>{d.cifra}</strong>
+            <span>{d.texto}</span>
+          </div>
+        ))}
+      </section>
+
+      <section class="seccion dos">
+        <div>
+          <span class="etiqueta">01 — Origen</span>
+          <h2>¿De dónde viene <span class="cursiva">el nombre?</span></h2>
+        </div>
+        <div>
+          <p>
+            «Mazahua» viene del náhuatl y suele traducirse como <em>dueños de venados</em> (de
+            <em>mázatl</em>, venado). Es el nombre con el que otros pueblos los conocieron; el
+            nombre propio es <strong>jñatjo</strong>.
+          </p>
+          <p>
+            Es el pueblo originario con más hablantes del Estado de México: más de 132 mil
+            personas en 2020.
+          </p>
+        </div>
+      </section>
+
+      <section class="seccion dos">
+        <div>
+          <span class="etiqueta">02 — Territorio</span>
+          <h2>¿Dónde <span class="cursiva">se habla?</span></h2>
+        </div>
+        <div>
+          <p class="lista-lugares">
+            {lugares.map((l, i) => (
+              <>
+                {l}
+                {i < lugares.length - 1 && <span class="punto">·</span>}
+              </>
+            ))}
+          </p>
+          <p class="suave">
+            Estado de México y región de Zitácuaro, en Michoacán. Por la migración, también hay
+            comunidades en Toluca y en la Ciudad de México.
+          </p>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <span class="etiqueta">03 — Familia</span>
+        <h2>Sus lenguas <span class="cursiva">hermanas</span></h2>
+        <p class="ancho">
+          Pertenece a la familia <strong>otomangue</strong>, grupo <strong>otopame</strong>. Sus
+          parientes más cercanos son el otomí, el matlatzinca y el tlahuica.
+        </p>
+        <ul class="familia">
+          {parientes.map((p) => (
+            <li class:list={[{ resaltar: p.resaltar }]}>
+              <span class="nombre">{p.nombre}</span>
+              <span class="propio">{p.propio || "—"}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="seccion cita">
+        <span class="etiqueta">04 — Sonido</span>
+        <p class="frase">
+          «En jñatjo, cada palabra tiene <span class="cursiva">su propia melodía.</span>»
+        </p>
+        <p class="ancho centrado suave">
+          Es una lengua tonal: la altura de la voz puede cambiar el significado de una palabra.
+          Por eso cada tarjeta de la lotería tiene su audio.
+        </p>
+      </section>
+
+      <section class="seccion">
+        <span class="etiqueta">05 — Escritura</span>
+        <h2>¿Cómo <span class="cursiva">se escribe?</span></h2>
+        <p class="ancho">
+          Usa el alfabeto latino con letras y signos extra. Existen varias propuestas de
+          escritura, por eso una palabra puede aparecer escrita de formas un poco distintas.
+        </p>
+        <div class="letras">
+          {letras.map((l) => (
+            <article>
+              <span class="glifo">{l.letra}</span>
+              <h3>{l.titulo}</h3>
+              <p>{l.texto}</p>
+              <p class="ejemplo">{l.ejemplo}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="seccion">
+        <span class="etiqueta">06 — Escucha</span>
+        <h2>Escucha <span class="cursiva">y repite</span></h2>
+        <PalabrasMuestra client:visible />
+      </section>
+
+      <section class="cierre">
+        <span class="etiqueta">Aprende jugando</span>
+        <h2>Las lenguas viven <span class="cursiva">cuando se usan.</span></h2>
+        <p>
+          Ve la imagen, escucha la palabra y búscala en tu tablero.
+        </p>
+        <div class="acciones">
+          <a class="btn" href="/jugar">Jugar ahora →</a>
+          <a class="enlace" href="/galeria">Ver las tarjetas</a>
+        </div>
+      </section>
+
+      <footer class="fuentes">
+        <span class="etiqueta">Fuentes</span>
+        <p>
+          INEGI, Censo de Población y Vivienda 2020 · INALI, Catálogo de las Lenguas Indígenas
+          Nacionales · SEP / DGEIIB, Programa de Lengua Jñatjo/Jñatrjo (2018) · CIESAS, Cuaderno
+          de trabajo de la lengua jñatrrjo.
+        </p>
+      </footer>
+    </main>
+    <div class="franja"></div>
+  </div>
+</Base>
+
+<style>
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 clamp(1.4rem, 5vw, 3rem) 4rem;
+  }
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    line-height: 1.15;
+  }
+  p {
+    margin: 0 0 1rem;
+  }
+  .suave {
+    color: var(--suave);
+  }
+  .ancho {
+    max-width: 620px;
+    margin-top: 1.2rem;
+    color: var(--suave);
+  }
+  .centrado {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  /* Portada */
+  .portada {
+    padding: clamp(4rem, 12vh, 7.5rem) 0 4rem;
+  }
+  .portada h1 {
+    font-size: clamp(4rem, 13vw, 8rem);
+    line-height: 0.95;
+  }
+  .subtitulo {
+    margin: 1rem 0 1.8rem;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+  }
+  .intro {
+    max-width: 560px;
+    font-size: 1.12rem;
+    color: var(--suave);
+  }
+
+  /* Datos */
+  .datos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+  }
+  .dato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 2rem 1.2rem 2rem 0;
+  }
+  .dato + .dato {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--linea);
+  }
+  .dato strong {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    color: var(--azul);
+    line-height: 1.1;
+  }
+  .dato span {
+    font-size: 0.9rem;
+    color: var(--suave);
+  }
+
+  /* Secciones */
+  .seccion {
+    padding: clamp(4rem, 10vh, 6rem) 0;
+    border-bottom: 1px solid var(--linea);
+  }
+  .dos {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .dos > div:last-child {
+    padding-top: 2.4rem;
+    font-size: 1.05rem;
+  }
+  .lista-lugares {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.7;
+  }
+  .punto {
+    margin: 0 0.55rem;
+    color: var(--azul);
+  }
+
+  /* Familia */
+  .familia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--linea);
+  }
+  .familia li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1.4rem 0;
+    border-top: 2px solid transparent;
+    margin-top: -1px;
+  }
+  .familia .nombre {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+  }
+  .familia .propio {
+    font-style: italic;
+    color: var(--suave);
+  }
+  .familia .resaltar {
+    border-top-color: var(--azul);
+  }
+  .familia .resaltar .nombre {
+    color: var(--azul);
+  }
+
+  /* Cita */
+  .cita {
+    text-align: center;
+  }
+  .frase {
+    max-width: 820px;
+    margin: 0 auto 1.5rem;
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    line-height: 1.25;
+  }
+
+  /* Letras */
+  .letras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+  }
+  .glifo {
+    display: block;
+    font-family: var(--serif);
+    font-size: 3.6rem;
+    line-height: 1;
+    color: var(--azul);
+    margin-bottom: 1.2rem;
+  }
+  .letras h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+  .letras p {
+    font-size: 0.93rem;
+    color: var(--suave);
+  }
+  .ejemplo {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--tinta) !important;
+  }
+
+  /* Cierre */
+  .cierre {
+    padding: clamp(5rem, 12vh, 7rem) 0;
+    text-align: center;
+  }
+  .cierre p {
+    color: var(--suave);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.2rem;
+  }
+
+  .fuentes {
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--linea);
+    font-size: 0.85rem;
+    color: var(--suave);
+  }
+
+  @media (max-width: 820px) {
+    .datos,
+    .familia {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .dato:nth-child(3) {
+      padding-left: 0;
+      border-left: 0;
+    }
+    .dato:nth-child(n + 3) {
+      border-top: 1px solid var(--linea);
+    }
+    .dos {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .dos > div:last-child {
+      padding-top: 1.5rem;
+    }
+    .letras {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .letras {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Imagen al lado del título */
+  .portada {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .portada-texto {
+    flex: 1 1 340px;
+  }
+  .portada .subtitulo {
+    line-height: 1.2;
+  }
+  .portada-imagen {
+    flex: 0 1 380px;
+    margin: 0 auto;
+  }
+  .portada-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply; /* el fondo blanco de la imagen se funde con el crema */
+  }
+</style>

@@ -1,0 +1,196 @@
+---
+// Barra de navegación de La lengua, Galería y Videos (mismo estilo que el inicio).
+const { activa = "" } = Astro.props;
+
+const secciones = [
+  { id: "inicio", href: "/", texto: "Inicio", icono: "casa" },
+  { id: "lengua", href: "/lengua", texto: "La lengua", icono: "mundo" },
+  { id: "galeria", href: "/galeria", texto: "Galería", icono: "imagen" },
+  { id: "videos", href: "/videos", texto: "Videos", icono: "video" },
+];
+---
+<header class="barra">
+  <a class="marca" href="/">
+    <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+      <g fill="currentColor">
+        <ellipse cx="24" cy="10" rx="6" ry="10" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(45 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(90 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(135 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(180 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(225 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(270 24 24)" />
+        <ellipse cx="24" cy="10" rx="6" ry="10" transform="rotate(315 24 24)" />
+      </g>
+      <circle cx="24" cy="24" r="6" fill="#ffffff" />
+    </svg>
+    Lotería <span>Mazahua</span>
+  </a>
+
+  <nav aria-label="Secciones">
+    <ul>
+      {secciones.map((s) => (
+        <li>
+          <a href={s.href} class:list={[{ activa: activa === s.id }]} aria-current={activa === s.id ? "page" : undefined}>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              {s.icono === "casa" && <path fill="currentColor" d="M12 3 2 11.5h3V21h5.5v-6h3v6H19v-9.5h3z" />}
+              {s.icono === "mundo" && (
+                <g fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18" />
+                </g>
+              )}
+              {s.icono === "imagen" && (
+                <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <path d="m4 18 5.5-6 4 4.5 2.5-2.5L20 18" />
+                  <circle cx="15.5" cy="8.5" r="1.6" />
+                </g>
+              )}
+              {s.icono === "video" && (
+                <g>
+                  <rect x="2" y="4" width="20" height="16" rx="4" fill="currentColor" />
+                  <path d="M10 8.5v7l6-3.5z" fill="var(--fondo-icono, #143b61)" />
+                </g>
+              )}
+            </svg>
+            {s.texto}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  <div class="accesos">
+    <a class="pildora jugar" href="/jugar">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z" />
+        <path fill="#f2c14e" d="m12 7 1.4 2.9 3.1.4-2.3 2.2.6 3.1-2.8-1.5-2.8 1.5.6-3.1-2.3-2.2 3.1-.4z" />
+      </svg>
+      Jugar
+    </a>
+    <a class="pildora admin" href="/admin">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <g fill="currentColor"><circle cx="12" cy="7.5" r="4.5" /><path d="M3.5 21c0-4.7 3.8-7.5 8.5-7.5s8.5 2.8 8.5 7.5z" /></g>
+      </svg>
+      Administrador
+    </a>
+  </div>
+</header>
+
+<style>
+  .barra {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem 1.6rem;
+    padding: 0.9rem clamp(1rem, 3vw, 2.2rem);
+    background: #143b61;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 6px 18px rgba(20, 59, 97, 0.25);
+    font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
+  }
+  .marca {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-right: 1.6rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: "Baloo 2", "Nunito", system-ui, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+  }
+  .marca span {
+    color: #a9c9e6;
+  }
+  .logo {
+    width: 2.6rem;
+    height: 2.6rem;
+    color: #7fb1dd;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: white;
+    --fondo-icono: #143b61;
+    transition: background 0.2s;
+  }
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  nav a.activa {
+    background: #e8eef5;
+    color: #143b61;
+    --fondo-icono: #e8eef5;
+  }
+  .ico {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: none;
+  }
+  .accesos {
+    display: flex;
+    gap: 0.7rem;
+    margin-left: auto;
+  }
+  .pildora {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: #143b61;
+    transition: transform 0.2s;
+  }
+  .pildora:hover {
+    transform: translateY(-2px);
+  }
+  .jugar {
+    background: #f2c14e;
+  }
+  .admin {
+    background: #e8eef5;
+  }
+  @media (max-width: 980px) {
+    .marca {
+      border-right: 0;
+      padding-right: 0;
+    }
+    .accesos {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 760px) {
+    .barra {
+      position: relative;
+    }
+    nav a {
+      padding: 0.45rem 0.8rem;
+    }
+    .accesos {
+      width: 100%;
+    }
+    .pildora {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+</style>
