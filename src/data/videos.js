@@ -18,27 +18,27 @@
 
 export const videos = [
   {
-    titulo: "¿Cómo se juega la Lotería Mazahua?",
-    descripcion: "Explicación del juego: cómo entrar con el código, marcar tu tablero y ganar.",
-    youtube: "",
+    titulo: "BACKEND",
+    descripcion: "Cómo funciona el servidor con FastAPI: recibe las peticiones del juego, consulta la base de datos y responde a la página.",
+    youtube: "https://youtu.be/ZnD-XId83ys?si=_E9Ae_nPHNkBoY8W",
     archivo: "",
   },
   {
-    titulo: "Saludos en mazahua",
-    descripcion: "Aprende a decir buenos días, buenas tardes y buenas noches en jñatjo.",
-    youtube: "",
+    titulo: "FRONTED",
+    descripcion: "La parte visual del proyecto hecha con Astro y Svelte: páginas, tablero interactivo, galería y audios en jñatjo.",
+    youtube: "https://youtu.be/av7-CJd_CEo?si=OOwnXibPDph2lN-j",
     archivo: "",
   },
   {
-    titulo: "Partes del cuerpo",
-    descripcion: "Escucha y repite las partes del cuerpo en lengua mazahua.",
-    youtube: "",
+    titulo: "LECTOR RFID",
+    descripcion: "Cómo el lector RFID detecta cada tarjeta física de la lotería y la envía al servidor para cantarla en el juego.",
+    youtube: "https://youtu.be/RBHUbg6xmKE?si=BioXQ24ppLaw_4RU",
     archivo: "",
   },
   {
-    titulo: "Presentación del proyecto",
-    descripcion: "Cómo construimos la lotería: tarjetas RFID, servidor y página web.",
-    youtube: "",
+    titulo: "RECURSOS MULTIMEDIA",
+    descripcion: "Las imágenes y los audios de las tarjetas: cada palabra con su ilustración y su pronunciación en lengua mazahua.",
+    youtube: "https://youtu.be/wFHY27v4cl4?si=IDaFpZTyRM-a5Tw2",
     archivo: "",
   },
 ];
