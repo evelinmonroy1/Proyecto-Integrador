@@ -17,7 +17,7 @@
   --gris: #99b2c7;
   --claro: #d2dee7;
   --hielo: #e8eef5;
-  --fondo-crema: #fdf6ec;
+  --fondo-crema: #f5f7fa;
   --mostaza: #f2c14e;
 
   /* Nombres que usan las páginas y componentes */
@@ -58,7 +58,7 @@
   height: 320px;
   opacity: 0.8;
   pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='%23d2dee7'%3E%3Cellipse cx='24' cy='10' rx='6' ry='10'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(45 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(90 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(135 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(180 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(225 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(270 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(315 24 24)'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='6' fill='%23fdf6ec'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='%23d2dee7'%3E%3Cellipse cx='24' cy='10' rx='6' ry='10'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(45 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(90 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(135 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(180 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(225 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(270 24 24)'/%3E%3Cellipse cx='24' cy='10' rx='6' ry='10' transform='rotate(315 24 24)'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='6' fill='%23f5f7fa'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 .tema-info::before {
   top: 7rem;
@@ -291,43 +291,4 @@
   .tema-info::after {
     display: none;
   }
-  /* ---------- La lengua: imagen al lado del título ---------- */
-.tema-info .portada.portada {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 2.5rem;
-}
-.tema-info .portada .subtitulo {
-  line-height: 1.2;
-}
-.tema-info .portada-imagen {
-  justify-self: end;
-  width: 100%;
-  max-width: 400px;
-}
-.tema-info .circulo-fondo {
-  display: none;
-}
-.tema-info .portada-imagen img {
-  display: block;
-  width: 100%;
-  height: auto;
-  mix-blend-mode: multiply; /* el fondo blanco de la imagen se funde con el crema */
-}
-@media (max-width: 820px) {
-  .tema-info .portada.portada {
-    grid-template-columns: 1fr;
-  }
-  .tema-info .portada-imagen {
-    justify-self: center;
-    max-width: 300px;
-  }
-  /* Fondo igual al del administrador */
-.tema-info {
-  background: #f5f7fa !important;
-}
-}
-
- 
 }
