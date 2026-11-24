@@ -1,8 +1,9 @@
 ---
+import Navbar from "../../components/Navbar.astro";
 import Base from "../../layouts/Base.astro";
 ---
 <Base titulo="Iniciar sesión · Lotería Mazahua">
-  <div class="franja"></div>
+  <Navbar />
   <main>
     <a class="volver" href="/">← Inicio</a>
     <h1>Acceso del administrador</h1>
@@ -86,7 +87,7 @@ import Base from "../../layouts/Base.astro";
   input {
     padding: 0.75rem 0.9rem;
     font-size: 1rem;
-    border: 2px solid #c9b9a6;
+    border: 2px solid #b8c4d4;
     border-radius: 12px;
   }
   input:focus { outline: none; border-color: var(--verde); }
