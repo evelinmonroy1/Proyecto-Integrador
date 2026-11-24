@@ -1,23 +1,24 @@
+/* Paleta: azules de invierno + dorado de acento. Tipografía: Poppins. */
 :root {
-  /* Base de la tarjeta */
-  --crema: #eef4fb;            /* fondo: azul muy claro */
-  --arena: #d3e0f2;            /* bordes y fondos suaves */
-  --cafe: #2c4a73;             /* títulos y bordes */
-  --tinta: #14213d;            /* texto principal */
+  /* Fondos y bordes */
+  --crema: #f5f7fa;            /* fondo de la página */
+  --arena: #dce2e9;            /* bordes y fondos suaves */
+  --cafe: #0f3557;             /* azul marino: títulos y bordes fuertes */
+  --tinta: #0f2a47;            /* texto principal */
 
-  /* Azules (antes verdes) */
-  --salvia: #9bb8e3;           /* azul cielo */
-  --verde: #1f4287;            /* azul profundo */
-
-  /* Dorados (antes cálidos) */
-  --terracota: #e0a82e;        /* dorado */
-   --terracota-oscuro: #1f4287; /* dorado oscuro (botones principales) */
-  --coral: #d9534f;            /* se deja rojo para errores y alertas */
+  /* Azules */
+  --salvia: #a7b9cd;           /* azul grisáceo claro */
+  --celeste: #4f7faf;          /* azul medio (tarjeta Jugador) */
+  --verde: #1d5a8e;            /* azul fuerte (botones principales) */
 
   /* Acento */
-  --celeste: #a9cfd6;
+  --terracota: #f2c14e;        /* amarillo (botón Jugar) */
+  --terracota-oscuro: #1d5a8e; /* azul fuerte, para botones y títulos destacados */
+  --coral: #d9534f;            /* rojo solo para errores y alertas */
 
-  --radio: 18px;
+  --radio: 22px;
+  --sombra: 0 10px 28px rgba(15, 53, 87, 0.16);
+  --fuente: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
 
 *, *::before, *::after {
@@ -29,12 +30,15 @@ body {
   min-height: 100vh;
   background: var(--crema);
   color: var(--tinta);
-  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-family: var(--fuente);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
   margin: 0;
   line-height: 1.1;
+  font-weight: 700;
+  color: var(--cafe);
 }
 
 a {
@@ -42,19 +46,73 @@ a {
   text-decoration: none;
 }
 
+button, input, select, textarea {
+  font-family: var(--fuente);
+}
 button {
   font: inherit;
   cursor: pointer;
 }
 
+/* Franja de rombos azul marino (como en la portada) */
 .franja {
-  height: 22px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--salvia) 0 20px,
-    var(--crema) 20px 26px,
-    var(--terracota) 26px 46px,
-    var(--crema) 46px 52px
-  );
-  border-block: 2px solid var(--cafe);
+  height: 34px;
+  background-color: var(--cafe);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cpath d='M17 3 31 17 17 31 3 17Z' fill='none' stroke='%234f7faf' stroke-width='2'/%3E%3Cpath d='M17 10 24 17 17 24 10 17Z' fill='none' stroke='%23a7b9cd' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 34px 34px;
+  background-repeat: repeat-x;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0.7rem 1.4rem;
+  background: var(--cafe);
+  color: white;
+  border-radius: 0 0 28px 28px;
+  box-shadow: var(--sombra);
+}
+.navbar .marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+}
+.navbar .marca span { color: var(--salvia); }
+.navbar .marca svg { width: 38px; height: 38px; }
+.navbar nav { display: flex; gap: 0.4rem; margin-left: 0.6rem; }
+.navbar .enlace {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 500;
+  color: white;
+}
+.navbar .enlace.activo { background: var(--crema); color: var(--cafe); }
+.navbar .enlace:hover:not(.activo) { background: rgba(255, 255, 255, 0.14); }
+.navbar .derecha { margin-left: auto; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.navbar .boton-nav {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: #e8edf4;
+  color: var(--cafe);
+}
+.navbar .boton-nav.amarillo { background: var(--terracota); color: var(--cafe); }
+.navbar .boton-nav:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* En partida, el administrador usa toda la pantalla */
+body.en-partida .navbar { display: none; }
+
+@media (max-width: 640px) {
+  .navbar { padding: 0.6rem 0.9rem; border-radius: 0 0 20px 20px; }
+  .navbar nav { display: none; }
+  .navbar .marca { font-size: 1.05rem; }
+  .navbar .marca svg { width: 30px; height: 30px; }
+  .navbar .boton-nav { padding: 0.45rem 0.9rem; font-size: 0.9rem; }
 }
