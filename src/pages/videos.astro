@@ -31,11 +31,12 @@ const lista = videos.map((v) => ({ ...v, id: idYoutube(v.youtube) }));
             <div class="pantalla">
               {v.id ? (
                 <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                  src={`https://www.youtube.com/embed/${v.id}`}
                   title={v.titulo}
                   loading="lazy"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 allowfullscreen
                 ></iframe>
               ) : v.archivo ? (
                 <video src={v.archivo} controls preload="metadata"></video>
