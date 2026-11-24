@@ -279,7 +279,7 @@
     border-radius: var(--radio);
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-    box-shadow: 0 6px 0 rgba(181, 131, 90, 0.2);
+    box-shadow: 0 6px 18px rgba(15, 53, 87, 0.2);
   }
   h2 {
     font-size: 1.4rem;
@@ -302,7 +302,7 @@
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
-    background: #b9a99a;
+    background: #a7b9cd;
   }
   .punto.vivo {
     background: #2e9e5b;
@@ -310,7 +310,7 @@
 
   .resumen {
     margin: 0 0 1rem;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .herramientas {
     display: flex;
@@ -341,7 +341,7 @@
 
   .vacio {
     text-align: center;
-    color: #6b5a4a;
+    color: #4a5d7a;
     padding: 1.5rem 0;
     margin: 0;
   }
@@ -391,7 +391,7 @@
     background: var(--crema);
     font-size: 0.65rem;
     text-align: center;
-    color: #8a7a6a;
+    color: #7b8aa3;
   }
   .miniatura img {
     width: 100%;
@@ -414,7 +414,7 @@
     white-space: nowrap;
   }
   .espanol {
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .etiqueta {
     margin-top: 0.2rem;
@@ -456,7 +456,7 @@
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    box-shadow: 0 4px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 4px 12px rgba(15, 53, 87, 0.2);
   }
   .secundario {
     background: transparent;
@@ -483,7 +483,7 @@
     position: absolute;
     inset: 0;
     border: none;
-    background: rgba(46, 31, 31, 0.65);
+    background: rgba(15, 53, 87, 0.65);
   }
   .contenido {
     position: relative;
@@ -508,7 +508,7 @@
     margin: 0.3rem 0;
   }
   .ayuda {
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .onda {
     display: inline-block;

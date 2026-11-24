@@ -367,7 +367,7 @@
     border-radius: var(--radio);
     padding: 1.5rem;
     margin-bottom: 1.2rem;
-    box-shadow: 0 6px 0 rgba(181, 131, 90, 0.2);
+    box-shadow: 0 6px 18px rgba(15, 53, 87, 0.2);
   }
   h2 {
     font-size: 1.4rem;
@@ -377,7 +377,7 @@
     font-size: 1.15rem;
   }
   .ayuda {
-    color: #6b5a4a;
+    color: #4a5d7a;
     margin: 0.4rem 0 1rem;
   }
   .entrada-codigo,
@@ -414,11 +414,11 @@
     color: white;
     font-size: 1.15rem;
     font-weight: bold;
-    box-shadow: 0 5px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 5px 15px rgba(15, 53, 87, 0.2);
   }
   .boton:active {
     transform: translateY(3px);
-    box-shadow: 0 2px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 2px 6px rgba(15, 53, 87, 0.2);
   }
   .boton:disabled {
     opacity: 0.6;
@@ -451,7 +451,7 @@
     margin: 0.4rem 0 0.8rem;
   }
   .espera {
-    color: #6b5a4a;
+    color: #4a5d7a;
     margin: 0.6rem 0 1rem;
   }
   .conexion {

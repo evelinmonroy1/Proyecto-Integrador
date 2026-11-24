@@ -89,7 +89,7 @@ import Avatar from "./Avatar.svelte"
     background: var(--arena);
     border: 2px solid var(--cafe);
     border-radius: var(--radio);
-    box-shadow: 0 6px 0 rgba(181, 131, 90, 0.25);
+    box-shadow: 0 6px 18px rgba(15, 53, 87, 0.2);
   }
   h2 {
     font-size: clamp(1.5rem, 5vw, 2.1rem);
@@ -108,7 +108,7 @@ import Avatar from "./Avatar.svelte"
   }
   .gracias {
     margin: 1.2rem 0 0;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
 
   /* ----- Podio ----- */

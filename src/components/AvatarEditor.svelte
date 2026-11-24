@@ -106,7 +106,7 @@
   .pestanas {
     display: flex;
     gap: 0.35rem;
-    background: #efe5d0;
+    background: #e8edf4;
     padding: 0.3rem;
     border-radius: 14px;
   }
@@ -119,7 +119,7 @@
     padding: 0.45rem 0.2rem;
     font-size: 0.85rem;
     font-weight: bold;
-    color: #5a4636;
+    color: #2c4a6e;
     background: transparent;
     border: none;
     border-radius: 11px;
@@ -131,7 +131,7 @@
   .pestanas button.activa {
     background: #fff;
     color: #4e7452;
-    box-shadow: 0 1px 3px rgba(90, 70, 54, 0.25);
+    box-shadow: 0 1px 3px rgba(15, 53, 87, 0.25);
   }
   .opciones {
     display: grid;
@@ -145,7 +145,7 @@
     gap: 0.2rem;
     padding: 0.5rem 0.25rem;
     background: #fff;
-    border: 2px solid #e2d5bd;
+    border: 2px solid #dce2e9;
     border-radius: 16px;
     cursor: pointer;
     transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
@@ -156,7 +156,7 @@
   .op.elegida {
     border-color: #4e7452;
     box-shadow: 0 0 0 3px rgba(78, 116, 82, 0.25);
-    background: #f2f7ef;
+    background: #eef4fb;
   }
   .mini {
     font-size: 3.6rem;
@@ -165,7 +165,7 @@
   .etiqueta {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #5a4636;
+    color: #2c4a6e;
     text-align: center;
   }
   @media (min-width: 520px) {

@@ -72,6 +72,14 @@
     });
   }
 
+  // Sonido de fin de partida: el archivo va en public/sonidos/fin.mp3
+  function sonarFin() {
+    if (!sonido) return;
+    audioActual?.pause();
+    audioActual = new Audio("/sonidos/fin.mp3");
+    audioActual.play().catch(() => {}); // si falta el archivo o el navegador lo bloquea, no pasa nada
+  }
+
   function activarSonido() {
     sonidoBloqueado = false; // este clic desbloquea el audio en el navegador
     if (ultima) reproducir(ultima.palabra);
@@ -153,6 +161,7 @@
       if (m.tipo === "fin") {
         ganadores = m.podio;
         partida = { ...partida, estado: "finalizada" };
+        sonarFin();
       }
     };
     socket.onclose = (e) => {
@@ -514,7 +523,7 @@
     border-radius: var(--radio);
     padding: 1.5rem;
     margin-bottom: 1.2rem;
-    box-shadow: 0 6px 0 rgba(44, 74, 115, 0.2);
+    box-shadow: 0 6px 18px rgba(15, 53, 87, 0.2);
   }
   h2 {
     font-size: 1.3rem;
@@ -559,11 +568,11 @@
     color: white;
     font-size: 1.15rem;
     font-weight: bold;
-    box-shadow: 0 5px 0 rgba(20, 33, 61, 0.3);
+    box-shadow: 0 5px 15px rgba(15, 53, 87, 0.2);
   }
   .boton:active {
     transform: translateY(3px);
-    box-shadow: 0 2px 0 rgba(20, 33, 61, 0.3);
+    box-shadow: 0 2px 6px rgba(15, 53, 87, 0.2);
   }
   .boton:disabled {
     opacity: 0.5;

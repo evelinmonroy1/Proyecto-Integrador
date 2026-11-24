@@ -35,9 +35,9 @@
       <!-- ================= CARA ================= -->
       {#if cara === 1}
         <g transform={posOjos} stroke-linecap="round">
-          <path d={`M${-sep / 2 + r} -1 Q0 -${r * 0.45} ${sep / 2 - r} -1`} fill="none" stroke="#5a4636" stroke-width="2.4" />
-          <circle cx={-sep / 2} cy="0" r={r} fill="#ffffff" fill-opacity="0.22" stroke="#5a4636" stroke-width="2.6" />
-          <circle cx={sep / 2} cy="0" r={r} fill="#ffffff" fill-opacity="0.22" stroke="#5a4636" stroke-width="2.6" />
+          <path d={`M${-sep / 2 + r} -1 Q0 -${r * 0.45} ${sep / 2 - r} -1`} fill="none" stroke="#2c4a6e" stroke-width="2.4" />
+          <circle cx={-sep / 2} cy="0" r={r} fill="#ffffff" fill-opacity="0.22" stroke="#2c4a6e" stroke-width="2.6" />
+          <circle cx={sep / 2} cy="0" r={r} fill="#ffffff" fill-opacity="0.22" stroke="#2c4a6e" stroke-width="2.6" />
           <path d={`M${-sep / 2 - r * 0.6} ${-r * 0.55} Q${-sep / 2 - r * 0.2} ${-r * 0.85} ${-sep / 2 + r * 0.3} ${-r * 0.75}`} fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="2" />
           <path d={`M${sep / 2 - r * 0.6} ${-r * 0.55} Q${sep / 2 - r * 0.2} ${-r * 0.85} ${sep / 2 + r * 0.3} ${-r * 0.75}`} fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="2" />
         </g>
@@ -131,7 +131,7 @@
     border-radius: 28%;
     overflow: hidden;
     vertical-align: middle;
-    border: 0.04em solid #5a4636;
+    border: 0.04em solid #2c4a6e;
     box-sizing: border-box;
     line-height: 0;
     background-image: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 62%);
@@ -145,7 +145,7 @@
     object-fit: contain;
     pointer-events: none;
     user-select: none;
-    filter: drop-shadow(0 0.02em 0.02em rgba(60, 40, 20, 0.3));
+    filter: drop-shadow(0 0.02em 0.02em rgba(15, 53, 87, 0.3));
   }
   .capa {
     position: absolute;
@@ -153,6 +153,6 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    filter: drop-shadow(0 0.012em 0.012em rgba(60, 40, 20, 0.3));
+    filter: drop-shadow(0 0.012em 0.012em rgba(15, 53, 87, 0.3));
   }
 </style>

@@ -111,11 +111,11 @@
   <svg viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path
       d="M6 23 C4 10 18 3 32 5 C48 7 57 15 54 26 C51 36 36 39 24 37 C12 35 7 31 6 23 Z"
-      fill="#7b4a2e" stroke="#4a2a17" stroke-width="2.5" stroke-linejoin="round"
+      fill="#7b4a2e" stroke="#0f3557" stroke-width="2.5" stroke-linejoin="round"
     />
-    <circle cx="41" cy="15" r="3.2" fill="#4a2a17" opacity="0.55" />
-    <circle cx="33" cy="30" r="2.6" fill="#4a2a17" opacity="0.5" />
-    <circle cx="17" cy="26" r="2.2" fill="#4a2a17" opacity="0.45" />
+    <circle cx="41" cy="15" r="3.2" fill="#0f3557" opacity="0.55" />
+    <circle cx="33" cy="30" r="2.6" fill="#0f3557" opacity="0.5" />
+    <circle cx="17" cy="26" r="2.2" fill="#0f3557" opacity="0.45" />
     <ellipse cx="22" cy="14" rx="9" ry="3.8" fill="#fff" opacity="0.32" transform="rotate(-18 22 14)" />
     <path d="M27 28 Q35 31 44 26" stroke="#ead9b9" stroke-width="2.4" fill="none" stroke-linecap="round" />
   </svg>
@@ -253,7 +253,7 @@
   .centro {
     text-align: center;
     padding: 2rem 0;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
 
   /* Barra superior */
@@ -354,8 +354,8 @@
     border-radius: 22px;
     background:
       radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.7), transparent 70%),
-      #f4e8c9;
-    box-shadow: inset 0 3px 10px rgba(181, 131, 90, 0.18);
+      #e8edf4;
+    box-shadow: inset 0 3px 10px rgba(15, 53, 87, 0.18);
   }
   .mesa {
     position: absolute;
@@ -395,7 +395,7 @@
     display: none;
     margin: 0 0 0.2rem;
     font-size: 0.8rem;
-    color: #6b5a4a;
+    color: #4a5d7a;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -408,7 +408,7 @@
   }
   .espanol {
     margin: 0.1rem 0 0.25rem;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .etiqueta {
     display: inline-block;
@@ -426,7 +426,7 @@
   .espera {
     margin: 0.5rem 0;
     text-align: center;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .anteriores {
     display: none; /* en celular no hay espacio; en pantallas grandes sí se ve */
@@ -458,7 +458,7 @@
     background: white;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 0 rgba(181, 131, 90, 0.28), 0 6px 12px rgba(46, 31, 31, 0.12);
+    box-shadow: 0 4px 12px rgba(15, 53, 87, 0.2), 0 6px 12px rgba(15, 53, 87, 0.12);
     transition: border-color 0.2s, transform 0.12s, box-shadow 0.12s;
   }
   .casilla img {
@@ -473,7 +473,7 @@
   }
   .casilla:active {
     transform: translateY(2px);
-    box-shadow: 0 1px 0 rgba(181, 131, 90, 0.28);
+    box-shadow: 0 1px 3px rgba(15, 53, 87, 0.2);
   }
   .casilla.marcada {
     border-color: var(--verde);
@@ -503,7 +503,7 @@
   .frijol :global(svg) {
     width: 56%;
     height: auto;
-    filter: drop-shadow(0 2px 2px rgba(46, 31, 31, 0.45));
+    filter: drop-shadow(0 2px 2px rgba(15, 53, 87, 0.45));
   }
   @keyframes caer {
     from {
@@ -534,7 +534,7 @@
     z-index: 5;
     padding: 0.45rem 1rem;
     border-radius: 999px;
-    background: #2e1f1f;
+    background: #0f2a47;
     color: white;
     font-weight: bold;
     font-size: 0.9rem;
@@ -557,7 +557,7 @@
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
-    box-shadow: 0 5px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 5px 15px rgba(15, 53, 87, 0.2);
     cursor: pointer;
   }
 
@@ -590,7 +590,7 @@
     .actual {
       padding: 1rem;
       text-align: center;
-      box-shadow: 0 5px 0 rgba(181, 131, 90, 0.2);
+      box-shadow: 0 5px 15px rgba(15, 53, 87, 0.2);
     }
     .carta {
       flex-direction: column;

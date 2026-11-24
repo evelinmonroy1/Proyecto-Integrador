@@ -441,7 +441,7 @@
     border-radius: var(--radio);
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-    box-shadow: 0 6px 0 rgba(181, 131, 90, 0.2);
+    box-shadow: 0 6px 18px rgba(15, 53, 87, 0.2);
   }
   h2 {
     font-size: 1.4rem;
@@ -479,11 +479,11 @@
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    box-shadow: 0 4px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 4px 12px rgba(15, 53, 87, 0.2);
   }
   .boton:active {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 rgba(46, 31, 31, 0.25);
+    box-shadow: 0 2px 6px rgba(15, 53, 87, 0.2);
   }
   .boton:disabled {
     opacity: 0.55;
@@ -512,7 +512,7 @@
 
   .resumen {
     margin: 0 0 1rem;
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .contador {
     margin: 0 0 0.6rem;
@@ -521,7 +521,7 @@
   }
   .vacio {
     text-align: center;
-    color: #6b5a4a;
+    color: #4a5d7a;
     padding: 1.5rem 0;
     margin: 0;
   }
@@ -571,7 +571,7 @@
     background: var(--crema);
     font-size: 0.65rem;
     text-align: center;
-    color: #8a7a6a;
+    color: #7b8aa3;
   }
   .miniatura img {
     width: 100%;
@@ -593,7 +593,7 @@
     white-space: nowrap;
   }
   .espanol {
-    color: #6b5a4a;
+    color: #4a5d7a;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -648,7 +648,7 @@
     position: absolute;
     inset: 0;
     border: none;
-    background: rgba(46, 31, 31, 0.65);
+    background: rgba(15, 53, 87, 0.65);
   }
   .contenido {
     position: relative;
@@ -699,7 +699,7 @@
     font-size: 0.85rem;
   }
   .archivo small {
-    color: #6b5a4a;
+    color: #4a5d7a;
   }
   .previa {
     max-width: 120px;
